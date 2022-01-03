@@ -1,0 +1,19 @@
+ {{#if productos.length}}
+    <div class="table-responsive">
+        <table class="table table-dark">
+            <tr style="color: yellow;"> <th>Nombre</th><th>Precio</th><th>Foto</th></tr>
+            {{#each productos }}
+            <tr>
+                <td>{{this.nombre}}</td>
+                <td>{{this.precio}}</td>
+                <td><img src="{{this.thumbnail}}" width="50" height="50" alt="no encontrado"</td>
+
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+{{else}}
+    <h3 class="alert alert-danger">no se encontraron datos</h3>
+{{/if}}
+
+<button id="btn" type="submit" class="btn btn-primary"  onclick="location.href = '\index.html';" >Cargar articulos</button>
